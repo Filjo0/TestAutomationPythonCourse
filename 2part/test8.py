@@ -11,7 +11,7 @@ def calc(x):
 link = "http://suninjuly.github.io/get_attribute.html"
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome()
     browser.get(link)
 
     x_element = browser.find_element_by_id("treasure")

@@ -12,7 +12,7 @@ def calc(num1, num2):
 link = "http://suninjuly.github.io/selects2.html"
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome()
     browser.get(link)
 
     num1_element = browser.find_element_by_id("num1").text
