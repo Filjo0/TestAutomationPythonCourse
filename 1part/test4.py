@@ -5,7 +5,7 @@ from selenium import webdriver
 link = "http://suninjuly.github.io/huge_form.html"
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome()
     browser.get(link)
     elements = browser.find_elements_by_css_selector("input")
     for element in elements:

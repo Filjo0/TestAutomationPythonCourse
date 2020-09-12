@@ -8,7 +8,7 @@ link = "http://suninjuly.github.io/simple_form_find_task.html"
 link2 = "http://suninjuly.github.io/find_link_text"
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome()
     browser.get(link)
 
     input1 = browser.find_element_by_tag_name("input")

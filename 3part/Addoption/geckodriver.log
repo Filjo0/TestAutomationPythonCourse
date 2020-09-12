@@ -1,0 +1,15 @@
+1599917763816	geckodriver	INFO	Listening on 127.0.0.1:62839
+1599917766954	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\filjo\\AppData\\Local\\Temp\\rust_mozprofilefeK2F6"
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+[Parent 22916, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc, line 166
+1599917800845	Marionette	INFO	Listening on port 62847
+1599917801357	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://selenium1py.pythonanywhere.com/en-gb/, line 758: ReferenceError: oscar is not defined
+1599917807251	Marionette	INFO	Stopped listening on port 62847
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+

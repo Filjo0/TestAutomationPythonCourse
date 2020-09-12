@@ -6,7 +6,7 @@ from selenium import webdriver
 link = "http://suninjuly.github.io/find_link_text"
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
+    browser = webdriver.Chrome()
     browser.get(link)
 
     hyperlink = browser.find_element_by_link_text(str(math.ceil(math.pow(math.pi, math.e) * 10000)))
