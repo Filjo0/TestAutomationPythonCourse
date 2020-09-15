@@ -24,7 +24,7 @@ class TestMainPage1:
         self.browser.find_element_by_css_selector(".basket-mini .btn-group > a")
 
 
-class TestMainPage2():
+class TestMainPage2:
 
     def setup_method(self):
         print("start browser for test..")
