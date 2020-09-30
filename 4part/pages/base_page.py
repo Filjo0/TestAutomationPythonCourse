@@ -26,11 +26,16 @@ class BasePage:
     def go_to_login_page(self):
         link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
         link.click()
-        # alert = self.browser.switch_to.alert
-        # alert.accept()
 
     def should_have_login_link(self):
-        assert self.is_element_found(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+        assert self.is_element_found(*BasePageLocators.LOGIN_LINK), "Login link does not exist"
+
+    def go_to_cart_page(self):
+        button = self.browser.find_element(*BasePageLocators.CART_BUTTON)
+        button.click()
+
+    def should_have_cart_button(self):
+        assert self.is_element_found(*BasePageLocators.CART_BUTTON), "Cart button does not exist"
 
     def is_not_element_present(self, how, what, timeout=4):
         try:
