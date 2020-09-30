@@ -6,14 +6,14 @@ from .locators import ProductPageLocators
 
 class ProductPage(BasePage):
     def should_have_add_to_basket_button(self):
-        assert self.is_element_found(*ProductPageLocators.ADD_BUTTON), "'Add To Basket' button not found"
+        assert self.is_element_found(*ProductPageLocators.ADD_BUTTON), "Error. 'Add To Basket' button not found"
 
     def add_item_to_basket_click(self):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_BUTTON)
         add_to_basket_button.click()
 
     def should_have_basket_form(self):
-        assert self.is_element_found(*ProductPageLocators.BASKET_FORM), "'Basket Form' not found"
+        assert self.is_element_found(*ProductPageLocators.BASKET_FORM), "Error. 'Basket Form' not found"
 
     def should_have_price(self):
         assert self.is_element_found(*ProductPageLocators.ITEM_PRICE), "Price for this item not found"

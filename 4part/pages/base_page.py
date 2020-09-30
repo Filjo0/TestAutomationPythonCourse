@@ -30,12 +30,12 @@ class BasePage:
     def should_have_login_link(self):
         assert self.is_element_found(*BasePageLocators.LOGIN_LINK), "Login link does not exist"
 
-    def go_to_cart_page(self):
-        button = self.browser.find_element(*BasePageLocators.CART_BUTTON)
+    def go_to_basket_page(self):
+        button = self.browser.find_element(*BasePageLocators.BASKET_BUTTON)
         button.click()
 
-    def should_have_cart_button(self):
-        assert self.is_element_found(*BasePageLocators.CART_BUTTON), "Cart button does not exist"
+    def should_have_basket_button(self):
+        assert self.is_element_found(*BasePageLocators.BASKET_BUTTON), "Basket button does not exist"
 
     def is_not_element_present(self, how, what, timeout=4):
         try:
@@ -53,6 +53,10 @@ class BasePage:
             return False
 
         return True
+
+    def should_be_authorized_user(self):
+        assert self.is_element_found(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                   " probably unauthorised user"
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
