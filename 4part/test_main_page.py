@@ -1,8 +1,9 @@
 import pytest
+
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
 
-main_page = "http://selenium1py.pythonanywhere.com/"
+main_page = "https://selenium1py.pythonanywhere.com/"
 
 
 @pytest.mark.login_guest
@@ -19,4 +20,3 @@ class TestLoginFromMainPage:
         page = MainPage(browser, main_page)
         page.open()
         page.should_have_login_link()
-

@@ -8,7 +8,7 @@ def calc(x):
     return str(math.log(abs(12 * math.sin(int(x)))))
 
 
-link = "http://suninjuly.github.io/math.html "
+link = "https://suninjuly.github.io/math.html "
 
 try:
     browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')

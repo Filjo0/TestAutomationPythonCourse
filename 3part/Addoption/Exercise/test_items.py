@@ -1,6 +1,6 @@
 import time
 
-link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+link = "https://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 
 def test_find_card_button(browser):

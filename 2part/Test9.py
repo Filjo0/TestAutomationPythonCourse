@@ -9,7 +9,7 @@ def calc(num1, num2):
     return str(summ)
 
 
-link = "http://suninjuly.github.io/selects2.html"
+link = "https://suninjuly.github.io/selects2.html"
 
 try:
     browser = webdriver.Chrome()

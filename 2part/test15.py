@@ -11,7 +11,7 @@ def calc(x):
     return str(math.log(abs(12 * math.sin(int(x)))))
 
 
-link = "http://suninjuly.github.io/explicit_wait2.html"
+link = "https://suninjuly.github.io/explicit_wait2.html"
 
 try:
     browser = webdriver.Chrome()
@@ -38,4 +38,4 @@ finally:
     # успеваем скопировать код за 30 секунд
     time.sleep(30)
     # закрываем браузер после всех манипуляций
-    browser.quit()
+    quit()

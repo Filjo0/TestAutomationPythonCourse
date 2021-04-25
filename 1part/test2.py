@@ -3,9 +3,9 @@ import time
 
 from selenium import webdriver
 
-link = "http://suninjuly.github.io/simple_form_find_task.html"
+link = "https://suninjuly.github.io/simple_form_find_task.html"
 
-link2 = "http://suninjuly.github.io/find_link_text"
+link2 = "https://suninjuly.github.io/find_link_text"
 
 try:
     browser = webdriver.Chrome()

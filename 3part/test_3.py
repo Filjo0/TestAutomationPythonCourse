@@ -6,7 +6,7 @@ from selenium import webdriver
 
 class TestAbs(unittest.TestCase):
     def test_abs1(self, browser):
-        link = "http://suninjuly.github.io/registration1.html"
+        link = "https://suninjuly.github.io/registration1.html"
         browser.get(link)
 
         # Ваш код, который заполняет обязательные поля
@@ -35,7 +35,7 @@ class TestAbs(unittest.TestCase):
                          False)
 
     def test_abs2(self):
-        link = "http://suninjuly.github.io/registration2.html"
+        link = "https://suninjuly.github.io/registration2.html"
         browser = webdriver.Chrome()
         browser.get(link)
 

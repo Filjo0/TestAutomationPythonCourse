@@ -6,9 +6,9 @@ from mimesis import Person
 from pages.login_page import LoginPage
 from pages.product_page import ProductPage
 
-link_no_offers = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
-link_the_city_stars = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
-products_url = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{}'
+link_no_offers = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
+link_the_city_stars = "https://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+products_url = 'https://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer{}'
 
 
 class TestGuestAddToBasketFromProductPage:

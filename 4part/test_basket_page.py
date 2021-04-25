@@ -1,7 +1,7 @@
 from pages.basket_page import BasketPage
 
-main_page = "http://selenium1py.pythonanywhere.com/"
-link_the_city_stars = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
+main_page = "https://selenium1py.pythonanywhere.com/"
+link_the_city_stars = "https://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
 
 
 def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
