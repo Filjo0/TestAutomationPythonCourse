@@ -3,8 +3,8 @@ from selenium import webdriver
 
 
 def browser():
-    print("\nstart browser for test..")
-    browser = webdriver.Chrome()
-    yield browser
-    print("\nquit browser..")
-    browser.quit()
+    print("\nstart browser_chrome for test..")
+    browser_chrome = webdriver.Chrome()
+    yield browser_chrome
+    print("\nquit browser_chrome..")
+    browser_chrome.quit()
