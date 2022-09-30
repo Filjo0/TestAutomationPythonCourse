@@ -2,11 +2,13 @@ import os
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 try:
     link = "https://suninjuly.github.io/file_input.html"
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля

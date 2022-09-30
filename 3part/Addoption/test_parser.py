@@ -1,4 +1,4 @@
-link = "http://selenium1py.pythonanywhere.com/"
+link = "https://selenium1py.pythonanywhere.com/"
 
 
 def test_guest_should_see_login_link(browser):

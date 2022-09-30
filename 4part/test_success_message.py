@@ -1,6 +1,6 @@
 from pages.product_page import ProductPage
 
-link_item = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
+link_item = "https://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/"
 
 
 def test_guest_cant_see_success_message(browser):

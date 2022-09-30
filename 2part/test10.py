@@ -2,7 +2,9 @@ import math
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def calc(x):
@@ -12,7 +14,7 @@ def calc(x):
 link = "https://SunInJuly.github.io/execute_script.html"
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     browser.get(link)
 
     x_element = browser.find_element(By.ID, "input_value")

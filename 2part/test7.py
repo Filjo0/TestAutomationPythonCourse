@@ -2,7 +2,9 @@ import math
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def calc(x):
@@ -12,29 +14,29 @@ def calc(x):
 link = "https://suninjuly.github.io/math.html "
 
 try:
-    browser = webdriver.Chrome(executable_path='C:/Users/filjo/PycharmProjects/ChromeDriver/chromedriver.exe')
-    browser.get(link)
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver.get(link)
 
-    x_element = browser.find_element(By.ID, "input_value")
+    x_element = driver.find_element(By.ID, "input_value")
     x = x_element.text
     y = calc(x)
 
-    input1 = browser.find_element(By.ID, "answer")
+    input1 = driver.find_element(By.ID, "answer")
     input1.send_keys(y)
-    input2 = browser.find_element(By.ID, "robotCheckbox")
+    input2 = driver.find_element(By.ID, "robotCheckbox")
     input2.click()
-    people_radio = browser.find_element(By.ID, "peopleRule")
+    people_radio = driver.find_element(By.ID, "peopleRule")
     people_radio.click()
 
     people_checked = people_radio.get_attribute("checked")
     print("value of people radio: ", people_checked)
     assert people_checked is not None, "People radio is not selected by default"
 
-    robots_radio = browser.find_element(By.ID, "robotsRule")
+    robots_radio = driver.find_element(By.ID, "robotsRule")
     robots_checked = robots_radio.get_attribute("checked")
     assert robots_checked is None
 
-    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
+    button = driver.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()
 
 

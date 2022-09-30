@@ -1,8 +1,10 @@
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def calc(num1, num2):
@@ -13,7 +15,7 @@ def calc(num1, num2):
 link = "https://suninjuly.github.io/selects2.html"
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     browser.get(link)
 
     num1_element = browser.find_element(By.ID, "num1").text

@@ -30,7 +30,7 @@ class TestLogin:
 
             button.click()
 
-            get_answers = browser.find_element_by_css_selector("pre.smart-hints__hint").text
+            get_answers = browser.find_element(By.CSS_SELECTOR, "pre.smart-hints__hint").text
 
             expected = "Correct!"
 
@@ -45,4 +45,4 @@ class TestLogin:
 
             time.sleep(10)
             # закрываем браузер после всех манипуляций
-            browser.quit()
+            quit()

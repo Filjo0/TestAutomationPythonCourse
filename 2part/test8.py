@@ -2,7 +2,9 @@ import math
 import time
 
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 def calc(x):
@@ -12,7 +14,7 @@ def calc(x):
 link = "https://suninjuly.github.io/get_attribute.html"
 
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     browser.get(link)
 
     x_element = browser.find_element(By.ID, "treasure")
