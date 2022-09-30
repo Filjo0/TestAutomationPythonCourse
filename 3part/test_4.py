@@ -2,6 +2,7 @@ import math
 import time
 
 import pytest
+from selenium.webdriver.common.by import By
 
 
 @pytest.fixture
@@ -22,10 +23,10 @@ class TestLogin:
             browser.get(link)
             browser.implicitly_wait(10)
 
-            input1 = browser.find_element_by_tag_name("textarea")
+            input1 = browser.find_element(By.TAG_NAME, "textarea")
             input1.send_keys(str(answer))
 
-            button = browser.find_element_by_css_selector("button.submit-submission")
+            button = browser.find_element(By.CSS_SELECTOR, "button.submit-submission")
 
             button.click()
 

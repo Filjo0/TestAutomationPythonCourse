@@ -2,6 +2,7 @@ import math
 import time
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 def calc(x):
@@ -14,20 +15,20 @@ try:
     browser = webdriver.Chrome()
     browser.get(link)
 
-    button1 = browser.find_element_by_css_selector("button.btn")
+    button1 = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button1.click()
 
     alert = browser.switch_to.alert
     alert.accept()
 
-    x_element = browser.find_element_by_id("input_value")
+    x_element = browser.find_element(By.ID, "input_value")
     x = x_element.text
     y = calc(x)
 
-    input1 = browser.find_element_by_id("answer")
+    input1 = browser.find_element(By.ID, "answer")
     input1.send_keys(y)
 
-    button2 = browser.find_element_by_css_selector("button.btn")
+    button2 = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button2.click()
 
 

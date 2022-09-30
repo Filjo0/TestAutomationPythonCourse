@@ -2,6 +2,7 @@ import time
 import unittest
 
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 
 class TestAbs(unittest.TestCase):
@@ -10,15 +11,15 @@ class TestAbs(unittest.TestCase):
         browser.get(link)
 
         # Ваш код, который заполняет обязательные поля
-        input1 = browser.find_element_by_css_selector("[placeholder='Input your first name']")
+        input1 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your first name']")
         input1.send_keys("Ivan")
-        input2 = browser.find_element_by_css_selector("[placeholder='Input your last name']")
+        input2 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your last name']")
         input2.send_keys("Petrov")
-        input5 = browser.find_element_by_css_selector("[placeholder='Input your email']")
+        input5 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your email']")
         input5.send_keys("Petrov@mail.ru")
 
         # Отправляем заполненную форму
-        button = browser.find_element_by_css_selector("button.btn")
+        button = browser.find_element(By.CSS_SELECTOR, "button.btn")
         button.click()
 
         # Проверяем, что смогли зарегистрироваться
@@ -40,15 +41,15 @@ class TestAbs(unittest.TestCase):
         browser.get(link)
 
         # Ваш код, который заполняет обязательные поля
-        input1 = browser.find_element_by_css_selector("[placeholder='Input your name']")
+        input1 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your name']")
         input1.send_keys("Ivan")
-        input2 = browser.find_element_by_css_selector("[placeholder='Input your last name']")
+        input2 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your last name']")
         input2.send_keys("Petrov")
-        input5 = browser.find_element_by_css_selector("[placeholder='Input your email']")
+        input5 = browser.find_element(By.CSS_SELECTOR, "[placeholder='Input your email']")
         input5.send_keys("Petrov@mail.ru")
 
         # Отправляем заполненную форму
-        button = browser.find_element_by_css_selector("button.btn")
+        button = browser.find_element(By.CSS_SELECTOR, "button.btn")
         button.click()
 
         # Проверяем, что смогли зарегистрироваться
