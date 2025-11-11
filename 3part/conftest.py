@@ -8,4 +8,4 @@ def init_browser():
     browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     yield browser
     print("\nquit browser..")
-    quit()
+    browser.close()

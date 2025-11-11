@@ -33,4 +33,4 @@ submit_button.click()
 time.sleep(5)
 
 # После выполнения всех действий мы не должны забыть закрыть окно браузера
-driver.quit()
+driver.close()
