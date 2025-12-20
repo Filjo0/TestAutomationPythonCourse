@@ -14,7 +14,7 @@ def browser():
     yield browser
     # этот код выполнится после завершения теста
     print("\nquit browser..")
-    quit()
+    browser.quit()
 
 
 class TestMainPage1:

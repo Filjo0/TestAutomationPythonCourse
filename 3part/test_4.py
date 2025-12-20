@@ -45,4 +45,4 @@ class TestLogin:
 
             time.sleep(10)
             # закрываем браузер после всех манипуляций
-            quit()
+            browser.quit()

@@ -1,5 +1,3 @@
-import time
-
 import pytest
 from mimesis import Person
 
@@ -39,8 +37,8 @@ class TestGuestAddToBasketFromProductPage:
                                  7, 8, 9
                              ])
     def test_guest_can_add_product_to_basket(self, browser, promo_code):
-        products_url.format(promo_code)
-        page = ProductPage(browser, products_url)
+        link = products_url.format(promo_code)
+        page = ProductPage(browser, link)
         page.open()
         page.should_have_add_to_basket_button()
         page.should_have_basket_form()
@@ -53,18 +51,17 @@ class TestGuestAddToBasketFromProductPage:
 
 class TestUserAddToBasketFromProductPage:
     @pytest.fixture(scope="function", autouse=True)
-    def setup(self):
+    def setup(self, browser):
         person = Person('en')
         self.email = person.email()
         self.password = person.password(9)
-
-    def test_user_can_register(self, browser):
+        
         page = ProductPage(browser, link_no_offers)
         page.open()
         page.go_to_login_page()
         login_page = LoginPage(browser, browser.current_url)
         login_page.register_new_user(self.email, self.password)
-        time.sleep(30)
+        login_page.should_be_authorized_user()
 
     @pytest.mark.need_review
     @pytest.mark.parametrize('promo_code',
@@ -74,8 +71,8 @@ class TestUserAddToBasketFromProductPage:
                                  7, 8, 9
                              ])
     def test_user_can_add_product_to_basket(self, browser, promo_code):
-        products_url.format(promo_code)
-        page = ProductPage(browser, products_url)
+        link = products_url.format(promo_code)
+        page = ProductPage(browser, link)
         page.open()
         page.should_have_add_to_basket_button()
         page.should_have_basket_form()

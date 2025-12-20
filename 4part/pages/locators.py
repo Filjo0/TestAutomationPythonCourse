@@ -26,5 +26,5 @@ class ProductPageLocators:
     ADD_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
     BASKET_FORM = (By.CSS_SELECTOR, "div.basket-mini.pull-right.hidden-xs")
     ITEM_PRICE = (By.CSS_SELECTOR, "div.col-sm-6.product_main > p.price_color")
-    ALERT_SUCCESS_ADDED = (By.CLASS_NAME, "alertinner > strong")
+    ALERT_SUCCESS_ADDED = (By.CSS_SELECTOR, ".alertinner > strong")
     ITEM_NAME = (By.CSS_SELECTOR, "div.col-sm-6.product_main > h1")

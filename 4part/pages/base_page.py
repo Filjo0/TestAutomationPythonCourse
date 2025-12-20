@@ -66,7 +66,7 @@ class BasePage:
         alert.accept()
         try:
             alert = self.browser.switch_to.alert
-            print("Your code: {alert.text}")
+            print(f"Your code: {alert.text}")
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
